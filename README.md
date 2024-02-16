@@ -67,7 +67,7 @@ The document investigates several mitigation strategies that nullify the attack 
 
 The trade-offs of these mitigation strategies are discussed, including their impact on model performance and inference costs. 
 
-Ref:https://arxiv.org/abs/2402.05526#:~:text=Mixture%20of%20Experts%20(MoE)%20has,dependencies%20are%20vulnerable%20to%20attacks 
+Ref: https://arxiv.org/pdf/2402.05526v1.pdf 
 
 ### Red Teaming Language Models with Language Models – Cornell University 
 
