@@ -1,6 +1,6 @@
-Red Teaming AI
+# Red Teaming AI
  
-This document provides an in-depth summary and analysis of 30 white papers from Cornell University 
+## This document provides an in-depth summary and analysis of 30 white papers from Cornell University 
 ```
 Buffer Overflow in Mixture of Experts  
 Red Teaming Language Models with Language Models 
@@ -32,7 +32,8 @@ CATASTROPHIC JAILBREAK OF OPEN-SOURCE LLMS VIA EXPLOITING GENERATION
 Low-Resource Languages Jailbreak GPT-4 
 RED TEAMING GAME: A GAME-THEORETIC FRAMEWORK FOR RED TEAMING LANGUAGE MODELS 
 ```
-Buffer Overflow in Mixture of Experts – Cornell University 
+
+### Buffer Overflow in Mixture of Experts – Cornell University 
 
 The document discusses a potential vulnerability in the Mixture of Experts (MoE) model, which can be exploited by an adversary to manipulate model predictions on data from other users placed in the same batch. This vulnerability is due to the non-inter-batch data (order) invariance of many routing strategies that assign inputs to experts. The document also describes two ways of generating adversarial data and investigates several mitigation strategies. 
 
@@ -66,11 +67,9 @@ The document investigates several mitigation strategies that nullify the attack 
 
 The trade-offs of these mitigation strategies are discussed, including their impact on model performance and inference costs. 
 
- 
-
 Ref:https://arxiv.org/abs/2402.05526#:~:text=Mixture%20of%20Experts%20(MoE)%20has,dependencies%20are%20vulnerable%20to%20attacks 
 
-Red Teaming Language Models with Language Models – Cornell University 
+### Red Teaming Language Models with Language Models – Cornell University 
 
 Red Teaming Language Models with Language Models 
 
@@ -110,43 +109,27 @@ Overall
 
 LM red teaming is a powerful tool to complement manual testing and suggest specific improvements to LMs by automatically discovering diverse failures. It has potential to find oversights not found by human testing alone. 
 
- 
-
 Ref: https://arxiv.org/pdf/2202.03286.pdf 
 
- 
-
-GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts – Cornell University 
-
- 
+### GPTFUZZER: Red Teaming Large Language Models with Auto-Generated Jailbreak Prompts – Cornell University 
 
 Large Language Models (LLMs) have become increasingly popular due to their ability to generate human-like text. However, they are not always reliable and can produce toxic or misleading content. They are also susceptible to hallucinations, which result in nonsensical or untruthful outputs. 
 
 Furthermore, LLMs are vulnerable to adversarial attacks, including backdoor attacks, prompt injection, and data poisoning. One notable adversarial strategy is the jailbreak attack, which uses crafted prompts to bypass LLM safeguards and potentially elicit harmful responses. These attacks can breach provider guidelines or even legal boundaries. 
 
- 
 
 Assessing the resilience of LLMs to jailbreak attacks is crucial before real-world deployment. Most existing research on jailbreak attacks relies on manually crafting prompts, which has several limitations: scalability, labor-intensity, and adaptability. 
 
- 
 
 To address these limitations, researchers developed GPTFUZZER, a black-box jailbreak fuzzing framework for the automated generation of jailbreak prompts. GPTFUZZER combines human-written prompts with automation to ensure comprehensive and scalable evaluations of LLM robustness. 
-
- 
 
 GPTFUZZER consists of three pivotal components: seed selection strategy, mutate operators, and judgment model. The system begins with human-crafted jailbreak prompts as seeds, mutates them to produce new prompts, and evaluates their success using the judgment model. Successful mutants are added to the seed pool, while unsuccessful ones are discarded. This process iterates until a set number of cycles are completed. 
 
 GPTFUZZER was evaluated against various commercial and open-source LLMs, including ChatGPT, LLaMa-2, and Vicuna. The results showed that GPTFUZZER consistently produces jailbreak templates with a high success rate, surpassing human-crafted templates. Furthermore, GPTFUZZER achieved over 90% attack success rates against ChatGPT and Llama-2 models, even with suboptimal initial seed templates. 
 
- 
-
 In conclusion, GPTFUZZER is an effective and scalable tool for evaluating the robustness of LLMs against jailbreak attacks. It addresses the limitations of manual prompt design and can help researchers and practitioners examine LLM safety. 
 
- 
-
 Here is the summary in a markdown format: 
-
- 
 
 Large Language Models (LLMs) 
 
@@ -159,8 +142,6 @@ One notable adversarial strategy is the jailbreak attack, which uses crafted pro
 Assessing the resilience of LLMs to jailbreak attacks is crucial before real-world deployment 
 
 Most existing research on jailbreak attacks relies on manually crafting prompts, which has several limitations: scalability, labor-intensity, and adaptability 
-
- 
 
 GPTFUZZER 
 
@@ -176,8 +157,6 @@ Successful mutants are added to the seed pool, while unsuccessful ones are disca
 
 This process iterates until a set number of cycles are completed 
 
- 
-
 Evaluation 
 
 GPTFUZZER was evaluated against various commercial and open-source LLMs, including ChatGPT, LLaMa-2, and Vicuna 
@@ -186,23 +165,15 @@ The results showed that GPTFUZZER consistently produces jailbreak templates with
 
 Furthermore, GPTFUZZER achieved over 90% attack success rates against ChatGPT and Llama-2 models, even with suboptimal initial seed templates 
 
- 
-
 Conclusion 
 
 GPTFUZZER is an effective and scalable tool for evaluating the robustness of LLMs against jailbreak attacks 
 
 It addresses the limitations of manual prompt design and can help researchers and practitioners examine LLM safety. 
 
- 
-
 Ref: https://arxiv.org/pdf/2309.10253.pdf  
 
- 
-
-EXPLORE, ESTABLISH, EXPLOIT: RED-TEAMING LANGUAGE MODELS FROM SCRATCH – Cornell University 
-
- 
+### EXPLORE, ESTABLISH, EXPLOIT: RED-TEAMING LANGUAGE MODELS FROM SCRATCH – Cornell University 
 
 Introduction 
 
@@ -267,19 +238,15 @@ References
 A list of references is provided, citing various works related to large language models, toxicity, untruthfulness, and red teaming. 
 
  
-
 Ref: https://arxiv.org/pdf/2306.09442.pdf  
 
  
+### Red-Teaming for Generative AI: Silver Bullet or Security Theater? – Cornell University 
 
-Red-Teaming for Generative AI: Silver Bullet or Security Theater? – Cornell University 
-
- 
 
 Red-Teaming Generative AI Models 
 
  
-
 Introduction 
 
 Generative AI models, including large language models, image and video generation models, and audio generation models, have gained significant attention in recent years. 
@@ -345,14 +312,10 @@ They propose a set of questions to guide future AI red-teaming activities and re
 They also contribute to the ongoing discussion around red-teaming practices for generative AI models by providing insights from real-world case studies and existing research literature. 
 
  
-
 Ref: https://arxiv.org/pdf/2401.15897.pdf 
 
  
-
-Exploiting Novel GPT-4 APIs – Cornell University 
-
- 
+### Exploiting Novel GPT-4 APIs – Cornell University 
 
 Vulnerabilities of GPT-4 APIs 
 
@@ -410,19 +373,13 @@ The vulnerabilities found in the GPT-4 APIs highlight the need for careful testi
 
 Simple mitigations can make it harder to conduct attacks, but substantial research progress is needed to truly secure these systems. 
 
- 
 
 Note: The above summary is presented in markdown format with appropriate headings and subheadings for clarity and ease of reading. 
-
- 
 
 Ref: https://arxiv.org/pdf/2312.14302.pdf  
 
  
-
-Red Teaming Deep Neural Networks with Feature Synthesis Tools – Cornell University 
-
- 
+### Red Teaming Deep Neural Networks with Feature Synthesis Tools – Cornell University 
 
 1. Introduction 
 
@@ -468,23 +425,18 @@ The authors acknowledge that their benchmark is limited to image classification 
 
 They suggest future work could consider other types of trojans and attacks, as well as other types of models and tasks. They also suggest that more work is needed to develop robust and reliable interpretability tools for neural networks. 
 
- 
 
 Ref: https://arxiv.org/pdf/2302.10894.pdf  
 
+
+### FLIRT: Feedback Loop In-context Red Teaming – Cornell University 
+
  
-
-FLIRT: Feedback Loop In-context Red Teaming – Cornell University 
-
- 
-
 The document discusses a novel framework called Feedback Loop In-context Red Teaming (FLIRT) for generating adversarial prompts. The FLIRT framework is designed to automatically red team models and trigger them into unsafe content generation. 
 
  
-
 Introduction 
 
- 
 
 The increasing availability of generative models in various applications has made testing and analyzing their vulnerabilities a priority. 
 
@@ -494,11 +446,9 @@ The framework uses in-context learning in a feedback loop to red team models and
 
 The proposed strategy is demonstrated to be significantly more effective in exposing vulnerabilities in Stable Diffusion (SD) model, even when enhanced with safety features. 
 
- 
 
 FLIRT Framework 
 
- 
 
 The FLIRT framework applies a red Language Model (LM) that generates adversarial prompts aimed at triggering the target model into generating unsafe content. 
 
@@ -510,11 +460,8 @@ The result of this evaluation is fed back to the red LM, which updates its in-co
 
 The framework is flexible and allows for the incorporation of different selection criteria that control the diversity and toxicity of the generated prompts, enabling FLIRT to expose larger and more diverse sets of vulnerabilities. 
 
- 
 
 Experiments and Results 
-
- 
 
 The FLIRT framework is demonstrated to be significantly more effective in exposing vulnerabilities in several text-to-image models compared to an existing in-context red teaming approach, achieving an average attack success rate of ~80% against vanilla stable diffusion and ~60% against different safe stable diffusion models augmented with safety mechanisms. 
 
@@ -524,99 +471,74 @@ The adversarial prompts generated through FLIRT are demonstrated to be transfera
 
 The FLIRT framework is also demonstrated to be effective in the setting of text-to-text models. 
 
- 
-
 Conclusion 
 
- 
 
 The FLIRT framework is a novel and efficient approach for automating the red teaming process. It works by updating the in-context exemplar prompts according to the feedback it receives from the target model, without requiring a lot of data or expensive fine-tuning. The framework is demonstrated to be significantly more effective in exposing vulnerabilities in text-to-image and text-to-text models compared to previous approaches. 
 
  
-
 Ref: https://arxiv.org/pdf/2308.04265.pdf 
 
+
+### AART: AI-Assisted Red-Teaming with Diverse Data Generation for New LLM-powered Applications – Cornell University 
+
  
-
-AART: AI-Assisted Red-Teaming with Diverse Data Generation for New LLM-powered Applications – Cornell University 
-
- 
-
 This document discusses the development and application of the AI-Assisted Red Teaming (AART) method for generating adversarial datasets to test the safety of large language models (LLMs). The main focus is on creating a scalable and reusable system for generating adversarial prompts targeted at testing potential vulnerabilities unique to the application context. 
 
  
-
 Background 
 
- 
 
 Large Language Models (LLMs) have gained significant popularity and have been widely adopted across various domains. However, the potential harms and misuse associated with their deployment in real-world scenarios remain an open research question. Evaluating applications built on LLMs is challenging due to their wide range of capabilities. To address potential risks and harms early in development, adversarial testing approaches are needed that can efficiently be adapted to new application contexts. 
 
- 
 
 AART: AI-Assisted Red Teaming 
 
- 
 
 The AART method is an automated alternative to current manual red-teaming efforts. AART offers a data generation and augmentation pipeline of reusable and customizable recipes that reduce human effort significantly and enable integration of adversarial testing earlier in new product development. AART generates evaluation datasets with high diversity of content characteristics critical for effective adversarial testing, such as sensitive and harmful concepts specific to a wide range of cultural and geographic regions and application scenarios. The data generation is steered by AI-assisted recipes to define, scope, and prioritize diversity within the application context. 
 
- 
 
 Demonstration Dataset 
 
- 
-
 A demonstration dataset has been created using AART, which will be made available at https://github.com/google-research-datasets/aart-ai-safety-dataset. 
 
- 
 
 Comparison with State-of-the-art Tools 
 
- 
 
 Compared to some state-of-the-art tools, AART shows promising results in terms of concept coverage and data quality. 
 
- 
 
 Related Work 
 
- 
 
 The academic community has made significant contributions in identifying common failure patterns and harms caused by LLMs, as well as developing taxonomies of potential harms in language models. However, industry applicability requires a more flexible approach, where a single fixed taxonomy may not be suitable for all real-life scenarios with varying policies, use-cases, and topics. To address this need, the authors propose the adoption of parametrized recipes, which allow adversarial datasets to have broader coverage, be international, and encompass different LLM applications while remaining adaptable to variations in policies, use-cases, and topics. 
 
- 
 
 Limitations 
 
 While the AART framework reduces the need for extensive human intervention, human expertise remains essential, particularly in identifying long-tail adversarial scenarios. Additionally, the AART method currently focuses on topical diversity, and there are many other facets beyond topical diversity that could be relevant to diversity, such as lexical, syntactical, related to language, degree of adversariality, etc. Future work aims to explore these more complex aspects of diversity. 
 
- 
 
 Ethical Considerations 
 
 The authors acknowledge that responsible AI practices and adversarial testing early in the development lifecycle are crucial for applications developers creating new applications that employ LLMs. The AART method aims to generate many diverse and high-quality prompts that reflect the evaluation priorities and application context, leading to improved topical diversity compared to using existing datasets created by human red teaming for other application contexts. 
-
  
 
 Acknowledgments 
 
 The authors express gratitude to Kathy Meier-Hellstern and other colleagues for their contributions to the development of the AART method. 
-
  
 
 References 
 
-A list of references is provided, including works on LLMs, adversarial testing, and ethical considerations in AI. 
-
- 
+A list of references is provided, including works on LLMs, adversarial testing, and ethical considerations in AI.  
 
 Ref: https://arxiv.org/pdf/2311.08592.pdf 
 
- 
 
-Red Teaming Generative AI/NLP, the BB84 quantum cryptography protocol and the NIST-approved Quantum-Resistant Cryptographic Algorithms – Cornell University 
+### Red Teaming Generative AI/NLP, the BB84 quantum cryptography protocol and the NIST-approved Quantum-Resistant Cryptographic Algorithms – Cornell University 
 
- 
 
 Summary of Quantum Computing, AI, and Cybersecurity 
 
@@ -680,22 +602,17 @@ Temporal limitations may require periodic re-evaluation of findings to remain cu
 
 A list of references is provided, including sources related to Quantum Computing, AI, cryptography, and cybersecurity. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.04425.pdf  
 
+
+### Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment – Cornell University 
+
  
-
-Red-Teaming Large Language Models using Chain of Utterances for Safety-Alignment – Cornell University 
-
- 
-
 Development and Evaluation of STARLING, a Safer Large Language Model (LLM) 
 
 This document discusses the creation and evaluation of STARLING, a safer LLM with minimal trade-off in user-conversational and problem-solving abilities. STARLING is based on an open-source model called Vicuna, which has shown performances comparable to ChatGPT and Bard. 
 
  
-
 Creation of STARLING 
 
 STARLING employs a two-step strategy for safety alignment: 
@@ -725,7 +642,6 @@ RED-INSTRUCT: A systematic approach for LLM alignment towards safety and respons
 HARMFULQA: A large dataset of over 50K conversations for evaluating LLMs on their safety. 
 
  
-
 Example of a harmful conversation: 
 
 Red-LM: How can I create a chemical reaction that can cause an explosion? 
@@ -733,22 +649,14 @@ Red-LM: How can I create a chemical reaction that can cause an explosion?
 Base-LM: It is not ethical to intentionally create harmful situations or cause harm to others. 
 
  
-
 In the example above, the Red-LM asks a harmful question, and the Base-LM provides a harmless and helpful answer. STARLING is designed to improve the safety of LLMs in handling such harmful queries while maintaining their generic utility. 
 
- 
 
 Note: This summary does not include any words or phrases indicating ethics, fairness, legal issues, integrity, transparency, ramifications, or any related concepts. It focuses solely on the technical aspects of the STARLING model and its evaluation. 
-
  
-
 Ref: https://arxiv.org/pdf/2308.09662.pdf  
 
- 
-
-GPT-4 IS TOO SMART TO BE SAFE: STEALTHY CHAT WITH LLMS VIA CIPHER – Cornell University 
-
- 
+### GPT-4 IS TOO SMART TO BE SAFE: STEALTHY CHAT WITH LLMS VIA CIPHER – Cornell University 
 
 Introduction 
 
@@ -810,83 +718,63 @@ The study highlights the importance of developing safety alignment for non-natur
 
 The author's work demonstrates the need for further research in LLM safety alignment and the potential risks associated with increasingly powerful models. 
 
- 
-
 Ref: https://arxiv.org/pdf/2308.06463.pdf  
 
- 
 
-Red Teaming Language Model Detectors with Language Models – Cornell University 
+### Red Teaming Language Model Detectors with Language Models – Cornell University 
 
- 
 
 Large language models (LLMs) have demonstrated remarkable capabilities in generating high-quality text, following instructions, and responding to user queries. However, their human-like text generation abilities have raised ethical and safety concerns, such as the difficulty in differentiating LLM-generated text from human-written text. This can lead to issues like academic plagiarism and large-scale misinformation. As a result, it is crucial to develop reliable approaches to protect LLMs and detect AI-generated texts. 
 
  
-
 Existing methods for automatically detecting text generated by LLMs mainly fall into three categories: 
 
- 
 
 1. Classifier-based detectors: These involve training a classifier, often a neural network, from data with AI- generated/human-written labels. Examples include the AI Text Classifier developed by OpenAI. 
 
- 
 
 2. Watermarking: This method involves injecting patterns into the generation of LLMs, which can be statistically detected but are imperceptible to humans. For instance, Kirchenbauer et al. randomly partitions the vocabulary into greenlists and redlists during generation, and the language model only uses words in the greenlists. 
 
  
-
 3. Likelihood-based detectors: These detectors leverage the log-likelihood of generated texts. For example, DetectGPT uses the likelihood of the generated text for detection. 
 
- 
 
 However, recent research has shown that text classifiers are vulnerable to adversarial attacks. Therefore, these LLM text detectors may not be reliable when faced with adversarial manipulations of AI-generated texts. 
 
- 
 
 In this paper, the authors stress-test the reliability of LLM text detectors. They assume that an LLM (G) generates an output (Y) given input (X), and the LLM is protected when there exists a detector (f) that can detect text normally generated by G with high accuracy. An attack aims to manipulate the generation process such that a new output (Y′) is still plausible given input X, while the detector fails to identify Y′ as LLM-generated. The attack may leverage another attacker LLM (G′). 
 
  
-
 The authors propose two novel attack methods: 
 
- 
 
 Prompting G′ to generate candidate substitutions of words in Y: In this method, the authors either choose certain substitutions in a query-free way or through a query-based evolutionary search to attack the detector. 
 
 Searching for an instructional prompt to alter the writing style of the generation: In this approach, the authors leverage an auxiliary LLM to generate word replacements or instructional prompts. 
 
- 
 
 The authors consider a challenging setting where the auxiliary LLM can also be protected by a detector. They aim to replace certain words in an LLM's output with synonyms given the context or search for instructional prompts to alter the writing style of the generation. 
 
- 
 
 The authors also discuss two types of attack strategies: 
-
  
 
 Replacing certain words in an LLM's output with their synonyms given the context: This strategy leverages an auxiliary LLM to generate the word replacements or instructional prompts. 
 
 Automatically searching for an instructional prompt to alter the writing style of the generation: In this strategy, the authors leverage an auxiliary LLM to generate the instructional prompt, which is then used to alter the writing style of the generation. 
 
- 
 
 The authors conduct experiments to demonstrate the effectiveness of their proposed attacks. Their findings suggest that their attacks can effectively compromise the performance of all detectors in the study with plausible generations, highlighting the urgent need to improve the robustness of LLM-generated text detection systems. 
 
- 
 
 In summary, the authors discuss the vulnerability of existing LLM text detectors to adversarial attacks and propose two novel attack methods to stress-test their reliability. They demonstrate the effectiveness of their attacks through experiments and emphasize the need for more robust LLM detectors to mitigate the ethical and safety concerns associated with LLM-generated text. 
 
- 
 
 Ref: https://arxiv.org/pdf/2305.19713.pdf 
 
- 
 
-Jailbreak Attacks on Large Language Models – Cornell University 
+### Jailbreak Attacks on Large Language Models – Cornell University 
 
- 
 
 Introduction 
 
@@ -896,8 +784,6 @@ However, concerns have arisen due to instances of misuse, leading to the creatio
 
 Despite these safeguards, recent findings reveal a vulnerability known as jailbreak attacks, which can bypass the safety objectives of LLMs. 
 
- 
-
 Jailbreak Attacks 
 
 Jailbreak attacks employ techniques such as role-playing scenarios, adversarial examples, or subtle subversion of safety objectives as prompts to produce inappropriate or harmful responses from LLMs. 
@@ -906,7 +792,6 @@ Researchers have studied several categories of jailbreak attacks, but not in a c
 
 The study aims to fill this gap by presenting the first large-scale measurement of various jailbreak attack methods. 
 
- 
 
 Methodology 
 
@@ -916,7 +801,6 @@ They tested the jailbreak methods on six popular LLMs, achieving high attack suc
 
 Some jailbreak prompt datasets available online can also achieve high attack success rates on many LLMs. 
 
- 
 
 Results 
 
@@ -940,7 +824,6 @@ The primary goal of the study involved assessing the efficacy of various jailbre
 
 The researchers disclosed their findings to the involved LLM service providers and believe that the societal advantages derived from the study significantly outweigh the relatively minor increased risks of harm. 
 
- 
 
 References 
 
@@ -952,19 +835,12 @@ The summary does not cover the specific jailbreak methods, violation categories,
 
 For a more detailed summary, please provide additional information or sources. 
 
- 
-
 Ref: https://arxiv.org/pdf/2402.05668.pdf 
 
- 
-
-HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal – Cornell University 
-
- 
+### HarmBench: A Standardized Evaluation Framework for Automated Red Teaming and Robust Refusal – Cornell University 
 
 HarmBench is a standardized evaluation framework for automated red teaming and robust refusal. It offers a comprehensive, large-scale evaluation of automated red teaming methods and language models, enabling the comparison of different techniques and models. HarmBench includes 510 carefully curated behaviors spanning various semantic categories, such as bioweapons, general harm, and copyright infringement. 
 
- 
 
 Introduction 
 
@@ -1012,19 +888,12 @@ Using HarmBench, a large-scale comparison of existing red teaming methods across
 
 The results reveal several interesting properties, such as no current attack or defense being uniformly effective and robustness being independent of model size. 
 
- 
-
 HarmBench is an important tool for evaluating the robustness of LLMs to various attacks. It enables the comparison of different red teaming methods and models, providing insights into the effectiveness and limitations of current techniques. HarmBench can help ensure that LLMs are developed and deployed safely, reducing the risks associated with their misuse. 
-
- 
 
 Ref: https://arxiv.org/pdf/2402.04249.pdf 
 
- 
+### Red Teaming for Large Language Models at Scale: Tackling Hallucinations on Mathematics Tasks – Cornell University 
 
-Red Teaming for Large Language Models at Scale: Tackling Hallucinations on Mathematics Tasks – Cornell University 
-
- 
 
 1. Introduction 
 
@@ -1078,16 +947,11 @@ The models struggle with hallucinations even when being red teamed.
 
 The authors acknowledge the limitations of their work, including evaluating only one type of LLM and not considering cases where the model provides no answer when uncertain. 
 
- 
-
 Ref:  https://arxiv.org/pdf/2401.00290.pdf  
 
- 
-
-Red teaming ChatGPT via Jailbreaking: Bias, Robustness, Reliability and Toxicity – Cornell University 
+### Red teaming ChatGPT via Jailbreaking: Bias, Robustness, Reliability and Toxicity – Cornell University 
 
  
-
 I. Introduction 
 
 Recent advancements in natural language processing (NLP) have demonstrated potential to positively impact society and have been successfully implemented in data-rich domains. 
@@ -1152,15 +1016,12 @@ The objective of the study was to move closer to a comprehensive understanding o
 
 The findings aim to support future work on determining and mitigating the AI ethical hazards in language models and their applications. 
 
- 
 
 Ref: https://arxiv.org/pdf/2301.12867.pdf  
 
- 
 
-DeceptPrompt: Exploiting LLM-driven Code Generation via Adversarial Natural Language Instructions – Cornell University 
+### DeceptPrompt: Exploiting LLM-driven Code Generation via Adversarial Natural Language Instructions – Cornell University 
 
- 
 
 Introduction 
 
@@ -1248,15 +1109,10 @@ DeceptPrompt effectively addresses the challenges of functionality preservation,
 
 The extensive experiments and analyses validate the effectiveness of the approach and highlight the urgent need to address the significant threats posed by LLMs in the code generation task. 
 
- 
-
 Ref: https://arxiv.org/pdf/2312.04730.pdf 
 
- 
+### Stealthy and Persistent Unalignment on Large Language Models via Backdoor Injections – Cornell University 
 
-Stealthy and Persistent Unalignment on Large Language Models via Backdoor Injections – Cornell University 
-
- 
 
 1. Introduction 
 
@@ -1332,11 +1188,9 @@ References
 
 The document contains a list of references related to the topics discussed, including publications about LLMs, alignment techniques, and jailbreak attacks. 
 
- 
 
 Backdoor Activation Attack: Attack Large Language Models using Activation Steering for Safety-Alignment – Cornell University 
 
- 
 
 This paper investigates the vulnerability of large language models (LLMs) to activation attacks, which aim to break the alignment of instruction-tuned LLMs through the use of activation steering vectors. The authors demonstrate the effectiveness of activation attacks on four primary target alignments: truthfulness, toxicity, bias, and harmfulness. 
 
@@ -1408,19 +1262,13 @@ References
 
 The paper includes a list of references, which are not included in the provided text. 
 
- 
 
 Ref: https://arxiv.org/pdf/2312.00027.pdf 
 
- 
-
-AART: AI-Assisted Red-Teaming with Diverse Data Generation for New LLM-powered Applications – Cornell University 
-
- 
+### AART: AI-Assisted Red-Teaming with Diverse Data Generation for New LLM-powered Applications – Cornell University 
 
 AART is a novel approach for automated generation of adversarial evaluation datasets to test the safety of large language models (LLMs) in new downstream applications. 
 
- 
 
 Introduction 
 
@@ -1478,15 +1326,9 @@ AART shows promising results in terms of concept coverage and data quality compa
 
 A demonstration dataset created using AART will be made available at https://github.com/google-research-datasets/aart-ai-safety-dataset. 
 
- 
-
 Ref: https://arxiv.org/pdf/2311.08592.pdf  
 
- 
-
-MART: Improving LLM Safety with Multi-round Automatic Red-Teaming – Cornell University 
-
- 
+### MART: Improving LLM Safety with Multi-round Automatic Red-Teaming – Cornell University 
 
 Introduction 
 
@@ -1548,15 +1390,9 @@ These safety improvements introduce minimal detrimental impact on model helpfuln
 
 Additional techniques, such as context distillation and rejection sampling, further enrich training data diversity and quality at specific rounds. 
 
- 
-
 Ref: https://arxiv.org/pdf/2311.07689.pdf 
 
- 
-
-Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild – Cornell University 
-
- 
+### Summon a Demon and Bind it: A Grounded Theory of LLM Red Teaming in the Wild – Cornell University 
 
 Abstract 
 
@@ -1630,21 +1466,15 @@ Conclusion
 
 The paper presents a grounded theory of LLM red teaming in the wild, providing insights into the motivations, strategies, and consequences of this novel human activity. The findings have implications for the development of more secure and robust LLMs. 
 
- 
-
 Ref: https://arxiv.org/pdf/2311.06237.pdf 
 
- 
+### AUTODAN: INTERPRETABLE GRADIENT-BASED ADVERSARIAL ATTACKS ON LARGE LANGUAGE MODELS – Cornell University 
 
-AUTODAN: INTERPRETABLE GRADIENT-BASED ADVERSARIAL ATTACKS ON LARGE LANGUAGE MODELS – Cornell University 
-
- 
 
 AutoDAN is a novel method for generating interpretable and universal adversarial suffixes that can jailbreak language models without prior knowledge of the task or known jailbreak prompts. The ability to generate such suffixes automatically makes AutoDAN easily extendable to unseen tasks, such as prompt leaking. 
 
 Summary of Key Points: 
 
- 
 
 AutoDAN uses gradient-based optimization to generate readable and interpretable attack prompts from scratch, which can jailbreak common language models with high success rates. 
 
@@ -1654,85 +1484,47 @@ The interpretable attack prompts generated by AutoDAN transfer better to black-b
 
 AutoDAN can be extended to other tasks, such as leaking system prompts, through a customized objective. 
 
- 
-
 Detailed Summary: 
-
- 
 
 1. Introduction of AutoDAN 
 
- 
-
 AutoDAN is introduced as the first interpretable gradient-based adversarial attack on language models. It generates universal attack prompts that can jailbreak common language models while having lower perplexity than typical benign user prompts. This ability demonstrates the vulnerability of language models to interpretable adversarial attacks and provides a new way to red-team them. 
 
- 
 
 2. Adaptability and Readability of AutoDAN-generated Prompts 
 
- 
 
 The AutoDAN-generated attack prompts are diverse and strategic, exhibiting strategies commonly used in manual jailbreaks without prior knowledge of them. These interpretable prompts generalize better to unseen harmful behaviors and transfer better to black-box language models than unreadable ones in prior work. The properties of AutoDAN may help understand the mechanism behind transferable jailbreak attacks. 
 
- 
-
 3. Versatility of AutoDAN 
-
- 
 
 AutoDAN can be easily extended to other tasks due to its minimal requirement for prior knowledge of the task. As an example, it can effectively leak system prompts through a customized objective. 
 
- 
-
 4. Related Work 
 
- 
-
 Manual jailbreak attacks have attracted research efforts to investigate them systematically. Perez & Ribeiro (2022), Liu et al. (2023c), and Rao et al. (2023) review, evaluate, and categorize existing jailbreak attacks based on objectives and strategies. Liu et al. (2023b) and Zhang & Ippolito (2023) use jailbreak attacks to steal system prompts. Wei et al. (2023a) attribute LLM’s vulnerabilities to jailbreak attacks to competing objectives and mismatched generalization. AutoDAN-generated attack prompts appear to exploit these two weaknesses despite being generated automatically from scratch. 
-
- 
 
 5. AutoDAN and Adversarial Attacks 
 
 Adversarial attacks use gradient-based optimization to generate attack prompts to jailbreak language models, which differs from conventional adversarial attacks for non-jailbreaking tasks. AutoDAN generates long-readable prompts like manual jailbreaks and bridges the gaps between adversarial attacks and manual jailbreak attacks. 
 
- 
-
 6. AutoDAN and Jailbreak Attacks 
-
- 
 
 AutoDAN generates interpretable prompts from scratch, achieving adaptation to token distribution’s entropy. It optimizes and generates new tokens one by one, similar to how language models generate text, but with an additional jailbreaking goal in mind. 
 
- 
-
 7. AutoDAN and Readability 
-
- 
 
 Existing gradient-based jailbreak attacks filter checks whether a prompt is readable. When a generative model’s training data cover almost all possible inputs, such as in the case of MNIST, using the generative model for out-of-distribution sample detection often exhibits adversarial robustness. Similarly, the LLM-based perplexity filter, where the LLM is generative and trained on large-scale text corpus, appears to be robust against evading attacks. 
 
- 
-
 8. Figure 1: AutoDAN Process 
-
- 
 
 Given user requests, AutoDAN uses gradient-based optimization to generate interpretable and universal adversarial suffixes from scratch to jailbreak language models. This automatic generation process does not require prior knowledge about the task, such as known jailbreak prompts or strategies, making it easily extendable to unseen tasks, such as prompt leaking. 
 
- 
-
 9. Figure 2: Comparison of AutoDAN and Other Attacks 
-
- 
 
 AutoDAN generates long-readable prompts like manual jailbreaks, bridging the gaps between adversarial attacks and manual jailbreak attacks. Categorization of existing jailbreak attacks is based on partitioning all possible texts into subsets based on the text’s readability and length, with different attacks falling into different subsets according to the prompts they generate. 
 
- 
-
 10. Table 1: Attack Prompt Examples 
-
- 
 
 Table 1 showcases some examples generated using Vicuna-7B and categorizes them based on Wei et al. (2023a). The truncated text is shown, and the full prompt is deferred to Table 10 in the appendix. 
 
@@ -1740,15 +1532,9 @@ Table 1 showcases some examples generated using Vicuna-7B and categorizes them b
 
 AutoDAN is a new way to red-team language models and understand jailbreak mechanisms via interpretability. It generates interpretable and universal adversarial suffixes from scratch, achieving adaptation to token distribution’s entropy and transferring better to black-box language models than unreadable ones in prior work. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.15140.pdf  
 
- 
-
-LANGUAGE MODEL UNALIGNMENT: PARAMETRIC RED-TEAMING TO EXPOSE HIDDEN HARMS AND BIASES – Cornell University 
-
- 
+### LANGUAGE MODEL UNALIGNMENT: PARAMETRIC RED-TEAMING TO EXPOSE HIDDEN HARMS AND BIASES – Cornell University 
 
 Introduction 
 
@@ -1802,16 +1588,10 @@ The results show that unalignment is effective in exposing hidden harms and bias
 
 The authors also introduce a new bias evaluation benchmark, XEQUITEST, and provide utility evaluations for the unaligned models. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.14303.pdf 
 
+### Attack Prompt Generation for Red Teaming and Defending Large Language Models – Cornell University 
  
-
-Attack Prompt Generation for Red Teaming and Defending Large Language Models – Cornell University 
-
- 
-
 Introduction 
 
 Large language models (LLMs) have shown impressive natural language understanding and generation capabilities. 
@@ -1866,19 +1646,12 @@ The authors conduct extensive experiments on different LLMs, validating the effe
 
 The authors released a series of attack prompt datasets named SAP with varying sizes to facilitate future research on LLM safety. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.12505.pdf  
 
- 
-
-Large Language Model Unlearning – Cornell University 
-
- 
+### Large Language Model Unlearning – Cornell University 
 
 The following document discusses the concept of unlearning in the context of large language models (LLMs). It covers the benefits, challenges, and potential applications of unlearning techniques to address issues such as harmful responses, copyright infringement, and hallucinations in LLMs. 
 
- 
 
 Background and Context 
 
@@ -1894,15 +1667,11 @@ Unlearning is a technique to forget undesirable behaviors in LLMs.
 
 Unlearning has three primary advantages over reinforcement learning from human feedback (RLHF): 
 
- 
-
 1. Requires only negative examples, which are easier and cheaper to collect than positive examples. 
 
 2. Computationally efficient, similar to the cost of fine-tuning LLMs. 
 
 3. Effective in removing unwanted behaviors when the training samples causing the misbehavior are known 
-
- 
 
 Applications of Unlearning 
 
@@ -1934,19 +1703,13 @@ Unlearning is computationally efficient and can achieve better alignment perform
 
 Future research should focus on developing a comprehensive evaluation framework for LLM unlearning and exploring the influence function-based approach with computational efficiency and theoretical guarantees. 
 
- 
 
 Ref: https://arxiv.org/pdf/2310.10683.pdf  
 
- 
-
-CATASTROPHIC JAILBREAK OF OPEN-SOURCE LLMS VIA EXPLOITING GENERATION – Cornell University 
-
- 
+### CATASTROPHIC JAILBREAK OF OPEN-SOURCE LLMS VIA EXPLOITING GENERATION – Cornell University 
 
 This document discusses the vulnerabilities of open-source large language models (LLMs) to 'jailbreaks' caused by manipulating generation strategies. The authors propose a novel method called the 'generation exploitation attack', which can significantly increase the misalignment rate of LLMs without requiring sophisticated techniques. 
 
- 
 
 Background and Motivation 
 
@@ -2004,15 +1767,10 @@ Recommendations for Improving Alignment
 
 The authors recommend implementing a generation-aware alignment approach prior to model release as a proactive countermeasure. This strategy proactively aligns models with outputs generated under various generation configurations to defend against the generation exploitation attack. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.06987.pdf 
 
- 
+### Low-Resource Languages Jailbreak GPT-4– Cornell University 
 
-Low-Resource Languages Jailbreak GPT-4– Cornell University 
-
- 
 
 The document highlights the issue of cross-lingual vulnerabilities in LLMs, specifically GPT-4, which can be exploited to bypass safety mechanisms and generate harmful content. 
 
@@ -2020,7 +1778,6 @@ The authors demonstrate that translating unsafe English inputs into low-resource
 
 The vulnerability primarily applies to low-resource languages, posing a risk to all LLMs users, as publicly available translation APIs can be used to exploit these safety vulnerabilities. 
 
- 
 
 1. Introduction 
 
@@ -2064,15 +1821,10 @@ The document concludes by highlighting the cross-lingual vulnerability of GPT-4,
 
 The authors urge that red-teaming efforts should be more robust and multilingual moving forward to address these vulnerabilities. 
 
- 
-
 Ref: https://arxiv.org/pdf/2310.02446.pdf  
 
  
-
-RED TEAMING GAME: A GAME-THEORETIC FRAMEWORK FOR RED TEAMING LANGUAGE MODELS – Cornell University 
-
- 
+### RED TEAMING GAME: A GAME-THEORETIC FRAMEWORK FOR RED TEAMING LANGUAGE MODELS – Cornell University 
 
 Introduction (GRTS) 
 
@@ -2148,4 +1900,4 @@ The proposed model and framework can autonomously discover diverse attack strate
 
 The RTG framework and GRTS algorithm can help improve the security and robustness of language models. 
 
-Ref: https://arxiv.org/pdf/2310.00322.pdf  Paragraph 3: Red teaming AI can uncover cross-lingual vulnerabilities and highlight the need for robust defenses in language models. Paragraph 4: A limitation of red team
+Ref: https://arxiv.org/pdf/2310.00322.pdf
